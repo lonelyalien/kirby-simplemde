@@ -1,8 +1,8 @@
 {
   "name": "simplemde",
   "description": "SimpleMDE for Kirby CMS",
-  "author": "Thomas Günther",
+  "author": "Thomas Günther & Lonely Alien",
   "license": "MIT",
-  "version": "1.3.13",
+  "version": "1.4",
   "type": "kirby-plugin"
 }

@@ -1,0 +1,70 @@
+# ----------------------------------------------------------------------
+# Always-ignore extensions (incl. OS or editor folders/files)
+# ----------------------------------------------------------------------
+
+*~
+*.diff
+*.css.map
+*.esproj
+*.err
+*.log
+*.orig
+*.rej
+*.sass-cache
+*.sublime-project
+*.sublime-workspace
+*.swo
+*.swp
+*.vi
+
+._*
+.buildpath
+.cache
+.com.apple*
+.CVS
+.dropbox
+.DS_Store
+.hg
+.idea
+.project
+.settings
+.svn
+.tmp
+.tmproj
+.tm_properties
+
+intermediate
+publish
+Thumbs.db
+
+# ----------------------------------------------------------------------
+# Ignore Gulp workflow folders/files
+# ----------------------------------------------------------------------
+
+# Node Modules
+node_modules
+npm-debug.log
+
+# Gulp
+gulpfile.js
+
+# ----------------------------------------------------------------------
+# Ignore Kirby CMS folders/files
+# ----------------------------------------------------------------------
+
+site/cache/*
+!site/cache/.gitkeep
+
+site/config/config.*.xip.io.php
+
+site/accounts/.logins
+
+thumbs/*
+!thumbs/.gitkeep
+
+
+# ----------------------------------------------------------------------
+# Ignore content folder (separate repository and/or submodule)
+# ----------------------------------------------------------------------
+
+content/*
