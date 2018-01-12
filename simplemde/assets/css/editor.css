@@ -12,7 +12,7 @@
 
 .field-with-simplemde textarea {
     border: none;
-    min-height: 300px
+    height: auto;
 }
 
 .field-with-simplemde .editor-toolbar {
@@ -189,7 +189,8 @@
 
 .field-with-simplemde .CodeMirror,
 .field-with-simplemde .CodeMirror .CodeMirror-scroll {
-    min-height: 130px
+    min-height: 150px;
+    height: auto;
 }
 
 .field-with-simplemde .CodeMirror.CodeMirror-over {
