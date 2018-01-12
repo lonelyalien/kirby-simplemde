@@ -14,10 +14,15 @@ return [
   'button.horizontal-rule' => 'Separator line',
   'button.link'            => 'Link',
   'button.page'            => 'Page',
+  'button.file'            => 'File',
   'button.email'           => 'Email',
-  
+  'button.tel'             => 'Telephone number',
+
   // Pagelink
   'pagelink.placeholder'   => 'Search for page',
-  'pagelink.no-results'   => 'No pages found',
-  
+  'pagelink.no-results'   => 'No results',
+
+  // Filelink
+  'filelink.placeholder'   => 'Search for file',
+
 ];
