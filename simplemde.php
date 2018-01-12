@@ -1,35 +1,43 @@
-<?php 
+<?php
 
   if(!function_exists('panel')) return;
 
   $kirby->set('field', 'simplemde', __DIR__ . DS . 'simplemde');
-  
-  function search() {
-    return site()->search(get("phrase"), array(
-    'minlength' => 1,
-    'fields' => array(
-      "title",
-      "uri"
-    )))->toArray();
-  }
-  
+
   panel()->routes[] = array(
     'pattern' => array(
-      '(:any)/simplemde/index.json',
-    ),
-    'action'  => function() {
-      $search = site()->search(get("phrase"), array(
-      'minlength' => 1,
-      'fields' => array(
-        "title",
-        "uri"
-      )))->toArray();
-      return json_encode($search, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-    },
-    'filter'  => 'auth',
-    'method'  => 'POST|GET'
+        '(:any)/simplemde/index.json',
+        ),
+        'action'  => function() {
+        $search = site()->search(get("phrase"), array(
+        'minlength' => 1,
+        'fields' => array(
+            "title",
+            "uri"
+        )))->toArray();
+        return json_encode($search, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        },
+        'filter'  => 'auth',
+        'method'  => 'POST|GET'
   );
-  
+
+  panel()->routes[] = array(
+    'pattern' => array(
+        '(:any)/simplemde/file.json',
+      ),
+      'action'  => function() {
+        if(get("page") != 'panel') {
+            $currentPage = site()->index()->find(get("page"));
+        } else {
+            $currentPage = site();
+        }
+        $search = $currentPage->files()->filterBy('filename', '*=', get("phrase"))->toArray();
+        return json_encode($search, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+      },
+      'filter'  => 'auth',
+      'method'  => 'POST|GET'
+  );
+
   panel()->routes[] = array(
     'pattern' => array(
       '(:any)/simplemde/translation.json',
@@ -44,10 +52,10 @@
       if (file_exists($langDir . $lang . '.php')) {
         $translation = include $langDir . $lang . '.php';
       }
-      else { 
+      else {
         $translation = include $langDir . 'en.php';
       }
-      
+
       return json_encode($translation, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     },
     'filter'  => 'auth',
