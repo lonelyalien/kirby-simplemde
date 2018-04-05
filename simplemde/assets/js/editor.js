@@ -260,7 +260,7 @@
 
                         // currentPage
                         var url = window.location.href;
-                        var regex = "pages\/(.*)\/edit";
+                        var regex = "pages\/(.*)\/edi";
                         var currentPage = url.match(regex)[1];
 
                         var index = {
@@ -280,8 +280,6 @@
 
                                     var title = input.getSelectedItemData().safeName;
                                     var fileType = input.getSelectedItemData().type;
-
-                                    console.log(fileType);
 
                                     var cm = simplemde.codemirror;
                                     var selection = cm.getSelection();
