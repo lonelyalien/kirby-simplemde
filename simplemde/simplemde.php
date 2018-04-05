@@ -6,8 +6,7 @@ class SimplemdeField extends TextField {
     'js' => array(
       'simplemde.js',
       'jquery.easy-autocomplete.min.js',
-      'editor.js',
-      'kirbytags-mode.js'
+      'editor.js'
     ),
     'css' => array(
       'simplemde.min.css',
