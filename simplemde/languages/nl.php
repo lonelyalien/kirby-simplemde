@@ -23,6 +23,6 @@ return [
   'pagelink.no-results'    => 'Geen resultaten',
 
   // Filelink
-  'filelink.placeholder'   => 'Zoek naar bestand',
+  'filelink.placeholder'   => 'Zoek naar bestand op deze pagina',
 
 ];

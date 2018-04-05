@@ -3,6 +3,6 @@
   "description": "SimpleMDE for Kirby CMS",
   "author": "Thomas Günther & Lonely Alien",
   "license": "MIT",
-  "version": "1.4",
+  "version": "1.4.2",
   "type": "kirby-plugin"
 }
