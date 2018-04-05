@@ -260,8 +260,8 @@
 
                         // currentPage
                         var url = window.location.href;
-                        var regex = "([^/]+)(?=\/[^/]+\/?$)";
-                        var currentPage = url.match(regex)[0];
+                        var regex = "pages\/(.*)\/edit";
+                        var currentPage = url.match(regex)[1];
 
                         var index = {
                             url: function (phrase) {
